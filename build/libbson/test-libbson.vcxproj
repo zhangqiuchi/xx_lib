@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D0C765C-C690-3F1D-A171-69F971BC94B5}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>test-libbson</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test-libbson.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">test-libbson</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test-libbson.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">test-libbson</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">test-libbson.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">test-libbson</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">test-libbson.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">test-libbson</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_WARNINGS;BINARY_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/binary";JSON_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/json";CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;BINARY_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/binary\";JSON_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/json\";CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\bin\Windows_64_Debug\bson-1.0.lib;..\..\bin\Windows_64_Debug\bson-static-1.0.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/test-libbson.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/test-libbson.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/binary";JSON_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/json";CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/binary\";JSON_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/json\";CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\bin\Windows_64_Release\bson-1.0.lib;..\..\bin\Windows_64_Release\bson-static-1.0.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xx/xx_lib/xx_lib/bin/Windows_64_Release/test-libbson.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xx/xx_lib/xx_lib/bin/Windows_64_Release/test-libbson.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/binary";JSON_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/json";CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/binary\";JSON_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/json\";CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\bin\Windows_64\MinSizeRel\bson-1.0.lib;..\..\bin\Windows_64\MinSizeRel\bson-static-1.0.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xx/xx_lib/xx_lib/bin/Windows_64/MinSizeRel/test-libbson.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xx/xx_lib/xx_lib/bin/Windows_64/MinSizeRel/test-libbson.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/binary";JSON_DIR="C:/xx/xx_lib/xx_lib/libbson//tests/json";CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_WARNINGS;BINARY_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/binary\";JSON_DIR=\"C:/xx/xx_lib/xx_lib/libbson//tests/json\";CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\build\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src\bson;C:\xx\xx_lib\xx_lib\libbson\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\bin\Windows_64\RelWithDebInfo\bson-1.0.lib;..\..\bin\Windows_64\RelWithDebInfo\bson-static-1.0.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/xx/xx_lib/xx_lib/bin/Windows_64/RelWithDebInfo/test-libbson.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/xx/xx_lib/xx_lib/bin/Windows_64/RelWithDebInfo/test-libbson.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\xx\xx_lib\xx_lib\libbson\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/libbson/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/libbson/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Templates\CPackConfig.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\BSONPackage.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\LoadVersion.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\MaintainerFlags.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\bson\bson-stdint.h;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-config.h.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-version.h.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-1.0.pc.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-static-1.0.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xx\xx_lib\xx_lib\build\libbson\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/libbson/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/libbson/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Templates\CPackConfig.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\BSONPackage.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\LoadVersion.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\MaintainerFlags.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\bson\bson-stdint.h;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-config.h.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-version.h.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-1.0.pc.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-static-1.0.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xx\xx_lib\xx_lib\build\libbson\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/libbson/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/libbson/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Templates\CPackConfig.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\BSONPackage.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\LoadVersion.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\MaintainerFlags.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\bson\bson-stdint.h;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-config.h.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-version.h.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-1.0.pc.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-static-1.0.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xx\xx_lib\xx_lib\build\libbson\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/libbson/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/libbson/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.21\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.21\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.21\Templates\CPackConfig.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\BSONPackage.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\LoadVersion.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\MaintainerFlags.cmake;C:\xx\xx_lib\xx_lib\libbson\build\cmake\bson\bson-stdint.h;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config-version.cmake.in;C:\xx\xx_lib\xx_lib\libbson\build\cmake\libbson-static-1.0-config.cmake.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-config.h.in;C:\xx\xx_lib\xx_lib\libbson\src\bson\bson-version.h.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-1.0.pc.in;C:\xx\xx_lib\xx_lib\libbson\src\libbson-static-1.0.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xx\xx_lib\xx_lib\build\libbson\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\corpus-test.c" />
+    <ClInclude Include="C:\xx\xx_lib\xx_lib\libbson\tests\corpus-test.h" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\TestSuite.c" />
+    <ClInclude Include="C:\xx\xx_lib\xx_lib\libbson\tests\TestSuite.h" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-libbson.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-atomic.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-bson.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-bson-corpus.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-endian.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-clock.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-decimal128.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-error.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-iso8601.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-iter.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-json.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-oid.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-reader.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-string.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-utf8.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-value.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-version.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-writer.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-bcon-basic.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\test-bcon-extract.c" />
+    <ClCompile Include="C:\xx\xx_lib\xx_lib\libbson\tests\json-test.c" />
+    <ClInclude Include="C:\xx\xx_lib\xx_lib\libbson\tests\json-test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\ZERO_CHECK.vcxproj">
+      <Project>{BDE6CB2B-6478-3B2D-B98C-347E3C02F8E3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\libbson\bson_shared.vcxproj">
+      <Project>{36C7F3F8-302B-3D0B-AB3C-1CF1BFD3D384}</Project>
+      <Name>bson_shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\libbson\bson_static.vcxproj">
+      <Project>{A1335195-E308-3FD5-9A41-8B8300C8BCFA}</Project>
+      <Name>bson_static</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

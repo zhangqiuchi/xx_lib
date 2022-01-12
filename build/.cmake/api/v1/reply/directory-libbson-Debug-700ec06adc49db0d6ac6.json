@@ -1,0 +1,289 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"include",
+			"install_package_config_file"
+		],
+		"files" : 
+		[
+			"C:/Program Files/CMake/share/cmake-3.21/Modules/InstallRequiredSystemLibraries.cmake",
+			"libbson/CMakeLists.txt",
+			"libbson/build/cmake/BSONPackage.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 774,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 779,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 352,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 359,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 366,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 392,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 1,
+				"line" : 405,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 413,
+				"parent" : 0
+			},
+			{
+				"file" : 2,
+				"parent" : 10
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 26,
+				"parent" : 11
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 12
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 12
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 29,
+				"parent" : 11
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 15
+			},
+			{
+				"command" : 0,
+				"file" : 2,
+				"line" : 17,
+				"parent" : 15
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/msvcp140.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/msvcp140_1.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/msvcp140_2.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/msvcp140_atomic_wait.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/msvcp140_codecvt_ids.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/vcruntime140_1.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/vcruntime140.dll",
+				"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Redist/MSVC/14.28.29910/x64/Microsoft.VC142.CRT/concrt140.dll"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				""
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/bson-1.0.lib"
+			],
+			"targetId" : "bson_shared::@6925a16fbb0ddd3289a9",
+			"targetIndex" : 11,
+			"targetIsImportLibrary" : true,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "bin",
+			"paths" : 
+			[
+				"C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/libbson-1.0.dll"
+			],
+			"targetId" : "bson_shared::@6925a16fbb0ddd3289a9",
+			"targetIndex" : 11,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/bson-static-1.0.lib"
+			],
+			"targetId" : "bson_static::@6925a16fbb0ddd3289a9",
+			"targetIndex" : 12,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "include/libbson-1.0",
+			"paths" : 
+			[
+				"build/libbson/src/bson/bson-config.h",
+				"build/libbson/src/bson/bson-stdint.h",
+				"build/libbson/src/bson/bson-version.h",
+				"libbson//src/bson/bcon.h",
+				"libbson//src/bson/bson-atomic.h",
+				"libbson//src/bson/bson-clock.h",
+				"libbson//src/bson/bson-compat.h",
+				"libbson//src/bson/bson-context.h",
+				"libbson//src/bson/bson-decimal128.h",
+				"libbson//src/bson/bson-endian.h",
+				"libbson//src/bson/bson-error.h",
+				"libbson//src/bson/bson.h",
+				"libbson//src/bson/bson-iter.h",
+				"libbson//src/bson/bson-json.h",
+				"libbson//src/bson/bson-keys.h",
+				"libbson//src/bson/bson-macros.h",
+				"libbson//src/bson/bson-md5.h",
+				"libbson//src/bson/bson-memory.h",
+				"libbson//src/bson/bson-oid.h",
+				"libbson//src/bson/bson-reader.h",
+				"libbson//src/bson/bson-stdint-win32.h",
+				"libbson//src/bson/bson-string.h",
+				"libbson//src/bson/bson-types.h",
+				"libbson//src/bson/bson-utf8.h",
+				"libbson//src/bson/bson-value.h",
+				"libbson//src/bson/bson-version-functions.h",
+				"libbson//src/bson/bson-writer.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/libbson/src/libbson-1.0.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "lib/pkgconfig",
+			"paths" : 
+			[
+				"build/libbson/src/libbson-static-1.0.pc"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/libbson-1.0",
+			"paths" : 
+			[
+				"build/libbson/libbson-1.0-config.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/libbson-1.0",
+			"paths" : 
+			[
+				"build/libbson/libbson-1.0-config-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/libbson-static-1.0",
+			"paths" : 
+			[
+				"build/libbson/libbson-static-1.0-config.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/libbson-static-1.0",
+			"paths" : 
+			[
+				"build/libbson/libbson-static-1.0-config-version.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "libbson",
+		"source" : "libbson"
+	}
+}

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4ACF69C-85B1-3F9A-AB77-07117EF2B540}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>examples</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\rapidjson\include;C:\xx\xx_lib\xx_lib\rapidjson\example\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\rapidjson\include;C:\xx\xx_lib\xx_lib\rapidjson\example\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\rapidjson\include;C:\xx\xx_lib\xx_lib\rapidjson\example\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\xx\xx_lib\xx_lib\rapidjson\include;C:\xx\xx_lib\xx_lib\rapidjson\example\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\xx\xx_lib\xx_lib\build\CMakeFiles\2e4a27093f76c7c2c57f146291104b37\examples.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\capitalize.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\condense.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\filterkey.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\filterkeydom.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\jsonx.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\lookaheadparser.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\messagereader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\parsebyparts.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\pretty.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\prettyauto.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\schemavalidator.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\serialize.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\simpledom.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\simplereader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\simplepullreader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\simplewriter.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\sortkeys.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Debug\tutorial.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\examples</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\capitalize.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\condense.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\filterkey.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\filterkeydom.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\jsonx.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\lookaheadparser.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\messagereader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\parsebyparts.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\pretty.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\prettyauto.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\schemavalidator.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\serialize.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\simpledom.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\simplereader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\simplepullreader.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\simplewriter.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\sortkeys.exe;C:\xx\xx_lib\xx_lib\bin\Windows_64_Release\tutorial.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\examples</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\capitalize.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\condense.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\filterkey.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\filterkeydom.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\jsonx.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\lookaheadparser.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\messagereader.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\parsebyparts.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\pretty.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\prettyauto.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\schemavalidator.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\serialize.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\simpledom.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\simplereader.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\simplepullreader.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\simplewriter.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\sortkeys.exe;C:\xx\xx_lib\xx_lib\build\bin\MinSizeRel\tutorial.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\examples</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\capitalize.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\condense.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\filterkey.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\filterkeydom.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\jsonx.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\lookaheadparser.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\messagereader.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\parsebyparts.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\pretty.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\prettyauto.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\schemavalidator.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\serialize.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\simpledom.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\simplereader.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\simplepullreader.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\simplewriter.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\sortkeys.exe;C:\xx\xx_lib\xx_lib\build\bin\RelWithDebInfo\tutorial.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\examples</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\xx\xx_lib\xx_lib\rapidjson\example\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/rapidjson/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/rapidjson/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/rapidjson/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/rapidjson/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/rapidjson/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/rapidjson/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/xx/xx_lib/xx_lib/rapidjson/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/xx/xx_lib/xx_lib -BC:/xx/xx_lib/xx_lib/build --check-stamp-file C:/xx/xx_lib/xx_lib/build/rapidjson/example/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\CMakeFiles\examples">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\ZERO_CHECK.vcxproj">
+      <Project>{BDE6CB2B-6478-3B2D-B98C-347E3C02F8E3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\capitalize.vcxproj">
+      <Project>{801C73E7-40DD-389A-A460-76B65159B59E}</Project>
+      <Name>capitalize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\condense.vcxproj">
+      <Project>{C34F7096-4F7E-3A29-8B81-1576C829A16A}</Project>
+      <Name>condense</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\filterkey.vcxproj">
+      <Project>{FF598A72-2C41-3977-BC42-AC284F98A5D5}</Project>
+      <Name>filterkey</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\filterkeydom.vcxproj">
+      <Project>{FE2C0DFD-D4A8-3C53-9827-D31F460EC58A}</Project>
+      <Name>filterkeydom</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\jsonx.vcxproj">
+      <Project>{6421FE17-6609-3B6C-A5FC-1EEBE4F5AA7F}</Project>
+      <Name>jsonx</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\lookaheadparser.vcxproj">
+      <Project>{6C8CFC73-E944-3838-AE0A-D4F95E38A35C}</Project>
+      <Name>lookaheadparser</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\messagereader.vcxproj">
+      <Project>{44A61161-1E30-320A-8B87-4E8D3E469CA1}</Project>
+      <Name>messagereader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\parsebyparts.vcxproj">
+      <Project>{93AC7735-BA22-3DAB-9776-8A47E961167D}</Project>
+      <Name>parsebyparts</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\pretty.vcxproj">
+      <Project>{8A812DCC-A934-3F4B-9D0E-6ED24C24E91C}</Project>
+      <Name>pretty</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\prettyauto.vcxproj">
+      <Project>{7B773E8C-9551-3313-BAA1-491DB805C05E}</Project>
+      <Name>prettyauto</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\schemavalidator.vcxproj">
+      <Project>{7A39CA5A-B12A-3537-A58A-FA61521F4735}</Project>
+      <Name>schemavalidator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\serialize.vcxproj">
+      <Project>{2260C82C-4A34-3FCB-8F37-26A17ECA1704}</Project>
+      <Name>serialize</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\simpledom.vcxproj">
+      <Project>{637829DE-CA8A-3B4B-AB9C-00910E34ABBA}</Project>
+      <Name>simpledom</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\simplepullreader.vcxproj">
+      <Project>{947F08B3-5DE2-318B-9C4C-EF87533E332D}</Project>
+      <Name>simplepullreader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\simplereader.vcxproj">
+      <Project>{F36D20F2-DAF2-36CB-A4B3-8A08590B8C70}</Project>
+      <Name>simplereader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\simplewriter.vcxproj">
+      <Project>{772E131E-805B-3C11-926D-89E9C4DF224E}</Project>
+      <Name>simplewriter</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\sortkeys.vcxproj">
+      <Project>{0EF932F9-9FF0-3690-95E6-9FF4904C64D9}</Project>
+      <Name>sortkeys</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\xx\xx_lib\xx_lib\build\rapidjson\example\tutorial.vcxproj">
+      <Project>{3F9894D8-0A23-35CC-BF4C-4456CC9D8980}</Project>
+      <Name>tutorial</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

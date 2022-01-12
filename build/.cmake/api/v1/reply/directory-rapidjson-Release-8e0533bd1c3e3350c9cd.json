@@ -1,0 +1,112 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"rapidjson/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 193,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 197,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 201,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 240,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 244,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "doc",
+			"destination" : "C:/Program Files/json_bson_msgpack/share/doc/RapidJSON",
+			"paths" : 
+			[
+				"rapidjson/readme.md"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "dev",
+			"destination" : "C:/Program Files/json_bson_msgpack/include",
+			"paths" : 
+			[
+				"rapidjson/include/rapidjson"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "examples",
+			"destination" : "C:/Program Files/json_bson_msgpack/share/doc/RapidJSON/examples",
+			"paths" : 
+			[
+				{
+					"from" : "rapidjson/example",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/lib/cmake/RapidJSON",
+			"paths" : 
+			[
+				"build/rapidjson/CMakeFiles/RapidJSONConfig.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "dev",
+			"destination" : "C:/Program Files/json_bson_msgpack/cmake",
+			"paths" : 
+			[
+				"build/rapidjson/RapidJSONConfig.cmake",
+				"build/rapidjson/RapidJSONConfigVersion.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "rapidjson",
+		"source" : "rapidjson"
+	}
+}

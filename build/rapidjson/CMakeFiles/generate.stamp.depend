@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.21/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CTestTargets.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.21/Modules/DartConfiguration.tcl.in
+C:/xx/xx_lib/xx_lib/rapidjson/CMakeLists.txt
+C:/xx/xx_lib/xx_lib/rapidjson/RapidJSONConfig.cmake.in
+C:/xx/xx_lib/xx_lib/rapidjson/RapidJSONConfigVersion.cmake.in

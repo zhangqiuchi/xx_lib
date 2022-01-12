@@ -1,0 +1,390 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"msgpack-c/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 257,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 264,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 268,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 268,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 320,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 327,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"C:/xx/xx_lib/xx_lib/bin/Windows_64_Debug/msgpackc.lib"
+			],
+			"targetId" : "msgpackc::@c67710dd15e4e4ba1909",
+			"targetIndex" : 23,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/fbuffer.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/gcc_atomic.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 5,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/object.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/pack.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 7,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/pack_define.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 8,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/sbuffer.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/timestamp.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 10,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/unpack.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 11,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/unpack_define.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 12,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/unpack_template.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 13,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/util.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 14,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/version.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 15,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/version_master.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 16,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/vrefbuffer.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 17,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/zbuffer.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 18,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"msgpack-c/include/msgpack/zone.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 19,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"build/msgpack-c/include/msgpack/pack_template.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 20,
+			"component" : "Unspecified",
+			"destination" : "C:/Program Files/json_bson_msgpack/include/msgpack",
+			"paths" : 
+			[
+				"build/msgpack-c/include/msgpack/sysdep.h"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 21,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/msgpack",
+			"exportName" : "msgpack-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "msgpackc::@c67710dd15e4e4ba1909",
+					"index" : 23
+				}
+			],
+			"paths" : 
+			[
+				"msgpack-c/CMakeFiles/Export/lib/cmake/msgpack/msgpack-targets.cmake"
+			],
+			"type" : "export"
+		},
+		{
+			"backtrace" : 22,
+			"component" : "Unspecified",
+			"destination" : "lib/cmake/msgpack",
+			"paths" : 
+			[
+				"build/msgpack-c/msgpack-config.cmake",
+				"build/msgpack-c/msgpack-config-version.cmake"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "msgpack-c",
+		"source" : "msgpack-c"
+	}
+}

@@ -1,0 +1,111 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"rapidjson/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "archivertest::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "capitalize::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "filterkeydom::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "condense::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "jsonx::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "messagereader::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "serialize::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "filterkey::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "lookaheadparser::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "prettyauto::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "perftest::@fed35426eb74f287070e"
+		},
+		{
+			"id" : "simpledom::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "parsebyparts::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "namespacetest::@425c8ba2f40044791aa0"
+		},
+		{
+			"id" : "simplereader::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "schemavalidator::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "pretty::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "gtest_main::@b3026ea3adfb7c2366ee"
+		},
+		{
+			"id" : "gtest::@b3026ea3adfb7c2366ee"
+		},
+		{
+			"id" : "simplewriter::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "unittest::@425c8ba2f40044791aa0"
+		},
+		{
+			"id" : "simplepullreader::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "tutorial::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "sortkeys::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "examples::@7ca86b96bb65dad9bf2d"
+		},
+		{
+			"id" : "tests::@fa195cb8e9d8f0787f13"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@011c6e949ad600554a44",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "rapidjson",
+		"source" : "rapidjson"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

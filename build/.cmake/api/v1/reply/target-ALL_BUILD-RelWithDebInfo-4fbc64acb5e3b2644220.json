@@ -1,0 +1,42 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"libbson/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "bson_shared::@6925a16fbb0ddd3289a9"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "bson_static::@6925a16fbb0ddd3289a9"
+		},
+		{
+			"id" : "test-libbson::@6925a16fbb0ddd3289a9"
+		}
+	],
+	"id" : "ALL_BUILD::@6925a16fbb0ddd3289a9",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "libbson",
+		"source" : "libbson"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

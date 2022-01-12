@@ -1,0 +1,6 @@
+[submodule "libbson"]
+	path = libbson
+	url = https://github.com/mongodb/libbson.git
+[submodule "rapidjson"]
+	path = rapidjson
+	url = https://github.com/Tencent/rapidjson.git

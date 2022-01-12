@@ -1,0 +1,36 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"msgpack-c/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "msgpackc::@c67710dd15e4e4ba1909"
+		}
+	],
+	"id" : "ALL_BUILD::@c67710dd15e4e4ba1909",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : "msgpack-c",
+		"source" : "msgpack-c"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

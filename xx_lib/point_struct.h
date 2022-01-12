@@ -88,10 +88,10 @@ public:
 
     void start();                                                     //开始
     void end();                                                       //结束
+
+    //insert
 private:
     std::pair<std::vector<xxxx>, bool> find(std::string key);         //查找键的值
-    
-
 private:
     size_t current;                                                  //当前的父节点
     size_t h[N], e[N], ne[N], idx;

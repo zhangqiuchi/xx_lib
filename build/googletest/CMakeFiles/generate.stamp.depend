@@ -1,6 +1,0 @@
-# CMake generation dependency list for this directory.
-C:/Program Files/CMake/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files/CMake/share/cmake-3.21/Modules/FindPackageMessage.cmake
-C:/Program Files/CMake/share/cmake-3.21/Modules/FindPythonInterp.cmake
-C:/xx/xx_lib/xx_lib/rapidjson/thirdparty/gtest/googletest/CMakeLists.txt
-C:/xx/xx_lib/xx_lib/rapidjson/thirdparty/gtest/googletest/cmake/internal_utils.cmake

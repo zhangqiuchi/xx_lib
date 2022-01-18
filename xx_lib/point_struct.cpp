@@ -19,14 +19,25 @@ size_t xx::traverse(size_t current, bool iss)
     return count - 1;
 }
 
-std::pair<std::vector<xx::xxxx>, bool> xx::find(std::string key)
+std::pair<std::vector<size_t>, bool> xx::find(std::size_t current, std::string key)
 {
-    std::vector<xxxx> r;
+    std::vector<size_t> r;
     size_t key_c = find_tree.count(key);
     auto key_begin = find_tree.find(key);
     for (size_t i = 0; i < key_c; ++i)
-        r.push_back(cx[(key_begin++)->second]);
+        if (current == key_begin->second.first)
+            r.push_back(((key_begin++)->second).second);
     return { r, r.size() ? true : false };
+}
+
+std::pair<std::vector<size_t>, bool> xx::find(std::string document)
+{
+    std::vector<size_t> r;
+    size_t key_c = find_document.count(document);
+    auto key_begin = find_document.find(document);
+    for (size_t i = 0; i < key_c; ++ i)
+        r.push_back((key_begin++)->second);
+    return {r, r.size() ? true : false};
 }
 
 void xx::bson_init_xx(std::string str)

@@ -6,8 +6,6 @@
 #include <stdlib.h>
 #include <point_struct.h>
 #include <vld.h>
-
-
 class Timer {
 private:
     decltype(std::chrono::steady_clock::now()) _timestamp;
@@ -69,11 +67,11 @@ void bzh(std::string& strs)
 
 int main(void)
 {
-    Timer timer;
-    xx* x = new xx();
-    std::string str = file_read("../test4.json");
 
-   
+    Timer timer;
+    std::unique_ptr<xx> x = std::make_unique<xx>();
+    std::string str = file_read("../hahah.json");
+
     timer.start();
     x->start();//初始化前需要开始
     x->json_init_xx(str);//用json字符串初始化
@@ -114,7 +112,7 @@ int main(void)
     msgpack = x->to_msgpack();
     std::cout << "to_msgpack\t" << timer.end() << "us" << std::endl;
     std::cout << std::endl;
-
-    delete x;
+    
+    std::cout << x->to_json() << std::endl;
     return 0;
 }

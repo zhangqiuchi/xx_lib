@@ -31,7 +31,7 @@ using JsonArray = rapidjson::GenericArray<true, rapidjson::Value>;
 using JsonAlloca = rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>;
 
 //这个必须换成vector 空间占用有点过分
-constexpr unsigned int N = static_cast<unsigned int>(1e7 + 5);
+//constexpr unsigned int N = static_cast<unsigned int>(1e7 + 5);
 
 class xx {
 public:    

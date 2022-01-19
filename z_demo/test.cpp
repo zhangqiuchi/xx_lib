@@ -126,6 +126,6 @@ int main(void)
         }
     }
     std::cout << timer.end() << std::endl;
-    std::cout << x->to_json() << std::endl;
+    //std::cout << x->to_json() << std::endl;
     return 0;
 }

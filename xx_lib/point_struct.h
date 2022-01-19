@@ -107,8 +107,9 @@ private:
     std::pair<std::vector<size_t>, bool> find(std::size_t current, std::string key);        //查找键的值
     std::pair<std::vector<size_t>, bool> find(std::string document);
 private_value
-    size_t current;                                                  //当前的父节点
-    size_t h[N], e[N], ne[N], idx;
+    size_t current, idx;                                                  //当前的父节点
+    //size_t h[N], e[N], ne[N], idx;
+    std::vector<size_t> h, e, ne;
     std::vector<xxxx> cx;                                            //存数据
     std::stack<size_t> cs;                                           //存储父节点的下标
     std::stack<size_t> cxs;                                          //存储数据
@@ -156,7 +157,10 @@ private_function                                                       //private
 
 inline xx::xx()
 {
-    memset(h, -1, sizeof(h));
+    h.resize(100);
+    e.resize(100);
+    ne.resize(100);
+
     idx = 0;
     current = -1; //初始化父节点为-1
 }
@@ -187,6 +191,12 @@ inline void xx::end()
 inline void xx::push_point(xxxx&& x)
 {
     cx.emplace_back(x);
+    if (cx.size() >= h.size())  
+    {
+        h.resize(cx.size() * 2);
+        e.resize(cx.size() * 2);
+        ne.resize(cx.size() * 2);
+    }
     if (current != -1 && cx[current].value_type == xxxx::u6) {
         cx[current].array.emplace_back(cx.size() - 1);
         return;
@@ -217,6 +227,7 @@ inline void xx::begin_document(std::string& key)
     x.array_document = 4;
     push_point(std::move(x));
     setcurrent();
+    h[current] = -1;
     find_document.insert({key, current});
 }
 
@@ -238,6 +249,7 @@ inline void xx::begin_array(std::string& key)
     x.array_document = 1;
     push_point(std::move(x));
     setcurrent();
+    h[current] = -1;
 }
 
 inline void xx::end_array(std::string& key)
@@ -296,10 +308,13 @@ inline xx::xxxx& xx::get_value(std::string key, size_t key_tm, bool istrue, std:
 
 inline void xx::clear()
 {
-    memset(h, -1, sizeof(h));
-    memset(e, -1 , sizeof(e));
-    memset(ne, -1, sizeof(ne));
-   
+    //memset(h, -1, sizeof(h));
+    //memset(e, -1 , sizeof(e));
+    //memset(ne, -1, sizeof(ne));
+
+    h.clear(); e.clear(); ne.clear();
+    h.resize(100); e.resize(100); ne.resize(100);
+
     for (auto c : cx) {
         if (c.value_type == xxxx::u1)
             delete[] c.str.str;

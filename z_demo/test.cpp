@@ -5,7 +5,7 @@
 
 #include <stdlib.h>
 #include <point_struct.h>
-#include <vld.h>
+//#include <vld.h>
 class Timer {
 private:
     decltype(std::chrono::steady_clock::now()) _timestamp;
@@ -68,6 +68,7 @@ int main(void)
     Timer timer;
     std::unique_ptr<xx> x = std::make_unique<xx>();
     std::string str = file_read("../hahah.json");
+    std::cout << sizeof(*x) << std::endl;
 
     timer.start();
     x->start();//初始化前需要开始
@@ -111,6 +112,7 @@ int main(void)
     std::cout << std::endl;
     
     //x->get_value(); //获得值
+    timer.start();
     for (int i = 1; i <= 2; i ++)
     {
         auto& t = x->get_value("zhangqiuchi", i, false, "aaaa", 2);
@@ -123,7 +125,7 @@ int main(void)
             t.str.len = sstr.length();
         }
     }
-
+    std::cout << timer.end() << std::endl;
     std::cout << x->to_json() << std::endl;
     return 0;
 }

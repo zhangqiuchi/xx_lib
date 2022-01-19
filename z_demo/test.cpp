@@ -20,8 +20,6 @@ public:
     }
 };
 
-
-
 std::string file_read(std::string path)
 {
     auto file = fopen(path.c_str(), "rb");//读进来的时候
@@ -67,7 +65,6 @@ void bzh(std::string& strs)
 
 int main(void)
 {
-
     Timer timer;
     std::unique_ptr<xx> x = std::make_unique<xx>();
     std::string str = file_read("../hahah.json");
@@ -113,6 +110,20 @@ int main(void)
     std::cout << "to_msgpack\t" << timer.end() << "us" << std::endl;
     std::cout << std::endl;
     
+    //x->get_value(); //获得值
+    for (int i = 1; i <= 2; i ++)
+    {
+        auto& t = x->get_value("zhangqiuchi", i, false, "aaaa", 2);
+        if (!x->get_value_is_empty(t))
+        {
+            t.value_type = xx::xxxx::u1;
+            std::string sstr = "Hello World";
+            t.str.str = new char[sstr.length()];
+            memcpy((void*)t.str.str, sstr.c_str(), sstr.length());
+            t.str.len = sstr.length();
+        }
+    }
+
     std::cout << x->to_json() << std::endl;
     return 0;
 }

@@ -15,6 +15,7 @@
 #include <cstring>
 
 #include <bson.h>
+
 #include <msgpack.h>
 
 #include <rapidjson/rapidjson.h>
@@ -69,11 +70,11 @@ public:
         {
             switch (vt)
             {
-                case u1:  {m_string* tt = (m_string*)t; str = *tt;}              break;
-                case u2:  {int32_t*  tt = (int32_t*) t; integer = *tt;}          break;
-                case u3:  {uint32_t* tt = (uint32_t*)t; unsigned_integer = *tt;} break;
-                case u4:  {double*   tt = (double*)  t; float_64 = *tt;}         break;
-                case u5:  {float*    tt = (float*)   t; float_32 = *tt;}         break;
+                case u1:    str = *(m_string*)t;                  break;
+                case u2:    integer = *(int32_t*)t;               break;
+                case u3:    unsigned_integer = *(uint32_t*)t;     break;
+                case u4:    float_64 = *(double*)t;               break;
+                case u5:    float_32 = *(float*)t;               break;
             }
         }
     };
@@ -153,7 +154,6 @@ private_function                                                       //private
     void json_xx_get_data(JsonItem& item, JsonAlloca& alloca);
 };
 
-
 inline xx::xx()
 {
     memset(h, -1, sizeof(h));
@@ -200,8 +200,7 @@ inline void xx::push_point(xxxx&& x)
 inline void xx::setcurrent() //设置父节点 begin_doucment, begin_array
 {
     cs.push(current);
-    current = cx.size() - 1;
-   
+    current = cx.size() - 1;   
 }
 
 inline void xx::resetcurrent() //恢复父节点  end_doucement, end_array
@@ -281,10 +280,10 @@ inline xx::xxxx& xx::get_value(std::string key, size_t key_tm, bool istrue, std:
     if (istrue)
     {
         auto ans = find(document_name);
-        current = ans.second ? ans.first[document_tm - 1] : 0;
+        current = ans.first.size() >= document_tm? ans.first[document_tm - 1] : 0;
     }
     auto ans = find(current, key);
-    current = ans.second ? ans.first[key_tm - 1] : -1;
+    current = ans.first.size() >= key_tm? ans.first[key_tm - 1] : -1;
     if (-1 == current)
         return cx.back();
     return cx[current];
@@ -317,7 +316,7 @@ inline void xx::clear()
     while (!cxs.empty()) cxs.pop();
     while (!cs.empty()) cs.pop();
     find_tree.clear();
-
+    find_document.clear();
     unpacker = {};
     _sbuf = {};
     _packer = {};

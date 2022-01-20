@@ -19,5 +19,5 @@ PUBLIC
 target_link_libraries(test
 PUBLIC
     xx
-    #vld
+    vld
 )

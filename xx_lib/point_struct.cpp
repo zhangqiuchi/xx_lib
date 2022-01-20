@@ -27,19 +27,19 @@ std::pair<std::vector<size_t>, bool> xx::find(std::size_t current, std::string k
     for (size_t i = 0; i < key_c; ++i)
         if (current == key_begin->second.first)
             r.push_back(((key_begin++)->second).second);
-        else    key_begin ++;
+        else
+            key_begin++;
     return { r, r.size() ? true : false };
 }
 
 std::pair<std::vector<size_t>, bool> xx::find(std::string document)
-{    
+{
     std::vector<size_t> r;
     size_t key_c = find_document.count(document);
     auto key_begin = find_document.find(document);
-    for (size_t i = 0; i < key_c; ++ i)
+    for (size_t i = 0; i < key_c; ++i)
         r.push_back((key_begin++)->second);
-    return {r, r.size() ? true : false};
-
+    return { r, r.size() ? true : false };
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -131,7 +131,7 @@ std::string xx::to_bson()
     traverse(0);
     bson = bson_new();
     bson_xx_get_data(bson);
-    std::string ans((const char*)bson_get_data((const bson_t*)bson), bson->len);    
+    std::string ans((const char*)bson_get_data((const bson_t*)bson), bson->len);
     bson_destroy(bson);
     return ans;
 }
@@ -154,7 +154,7 @@ void xx::msgpack_xx_get_data(msgpack_packer* _packer)
         size_t t_index = cxs.top();
         cxs.pop();
         xxxx t = cx[t_index];
-        
+
         switch (t.value_type) {
         case xxxx::u1:
             msgpack_pack_str_with_body(_packer, t.key.c_str(), strlen(t.key.c_str()));
@@ -237,32 +237,33 @@ void xx::bson_xx_get_data(bson_t* bson)
 
 void xx::msgpack_set_data(msgpack_object_kv const& obj)
 {
+    std::string key(obj.key.via.str.ptr, obj.key.via.str.size);
     if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_POSITIVE_INTEGER) {
         uint32_t v = obj.val.via.u64;
-        push_uint(std::string(obj.key.via.str.ptr, obj.key.via.str.size), v);
+        push_uint(key, v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_NEGATIVE_INTEGER) {
         int32_t v = obj.val.via.i64;
-        push_int(std::string(obj.key.via.str.ptr, obj.key.via.str.size), v);
+        push_int(key, v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_FLOAT32) {
         float v = obj.val.via.f64;
-        push_float_32(std::string(obj.key.via.str.ptr, obj.key.via.str.size), v);
+        push_float_32(key, v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_FLOAT64) {
         double v = obj.val.via.f64;
-        push_float_64(std::string(obj.key.via.str.ptr, obj.key.via.str.size), v);
+        push_float_64(key, v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_STR) {
         uint32_t len = obj.val.via.str.size;
-        push_string(std::string(obj.key.via.str.ptr, obj.key.via.str.size), obj.val.via.str.ptr, len);
+        push_string(key, obj.val.via.str.ptr, len);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_ARRAY) {
-        begin_array(std::string(obj.key.via.str.ptr, obj.key.via.str.size));
+        begin_array(key);
         for (uint32_t i = 0; i < obj.val.via.array.size; ++i) {
             msgpack_object_kv const& obj_item = { obj.key, obj.val.via.array.ptr[i] };
             msgpack_set_data(obj_item);
         }
-        end_array(std::string(obj.key.via.str.ptr, obj.key.via.str.size));
+        end_array(key);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_MAP) {
-        begin_document(std::string(obj.key.via.str.ptr, obj.key.via.str.size));
+        begin_document(key);
         msgpack_init_xx(obj.val);
-        end_document(std::string(obj.key.via.str.ptr, obj.key.via.str.size));
+        end_document(key);
     } else {
         return;
     }
@@ -340,13 +341,12 @@ bool xx::msgpack_pop_array(msgpack_packer* _packer, size_t index)
         case xxxx::u5:
             msgpack_pack_double(_packer, t.float_32);
             break;
-        case xxxx::u7:
-            {
-                size_t count = traverse(value);
-                msgpack_pack_map(_packer, count);
-                msgpack_xx_get_data(_packer);
-                break;
-            }
+        case xxxx::u7: {
+            size_t count = traverse(value);
+            msgpack_pack_map(_packer, count);
+            msgpack_xx_get_data(_packer);
+            break;
+        }
         default:
             break;
         }
@@ -354,22 +354,21 @@ bool xx::msgpack_pop_array(msgpack_packer* _packer, size_t index)
     return true;
 }
 
-
 void xx::json_init_xx(std::string str)
 {
     rapidjson::Document doc;
     doc.Parse(str.c_str());
-    if (doc.HasParseError()) 
+    if (doc.HasParseError())
         return;
     json_init_xx(doc);
 }
 
 void xx::json_init_xx(JsonItem const& item)
 {
-    if (!item.IsObject())   return;
+    if (!item.IsObject())
+        return;
     auto obj = item.GetObj();
-    for (auto iter = item.MemberBegin(); iter != item.MemberEnd(); iter ++)
-    {
+    for (auto iter = item.MemberBegin(); iter != item.MemberEnd(); iter++) {
         json_set_data(iter);
     }
 }
@@ -377,44 +376,30 @@ void xx::json_init_xx(JsonItem const& item)
 void xx::json_set_data(JsonIter const& iter)
 {
     std::string key(iter->name.GetString(), iter->name.GetStringLength());
-    if (iter->value.IsInt() && iter->value.GetInt() >= 0)
-    {
+    if (iter->value.IsInt() && iter->value.GetInt() >= 0) {
         uint32_t value = std::move(iter->value.GetInt());
         push_uint(key, value);
-    }
-    else if (iter->value.IsInt())
-    {
+    } else if (iter->value.IsInt()) {
         int32_t value = std::move(iter->value.GetInt());
         push_int(key, value);
-    }
-    else if (iter->value.IsDouble())
-    {
+    } else if (iter->value.IsDouble()) {
         double value = std::move(iter->value.GetDouble());
         push_float_64(key, value);
-    }
-    else if (iter->value.IsFloat())
-    {
+    } else if (iter->value.IsFloat()) {
         float value = std::move(iter->value.GetFloat());
         push_float_32(key, value);
-    }
-    else if (iter->value.IsString())
-    {
+    } else if (iter->value.IsString()) {
         uint32_t len = std::move(iter->value.GetStringLength());
         push_string(key, iter->value.GetString(), len);
-    }
-    else if (iter->value.IsArray())
-    {
+    } else if (iter->value.IsArray()) {
         auto value = std::move(iter->value.GetArray());
         json_set_array(value, key);
-    }
-    else if (iter->value.IsObject())
-    {
+    } else if (iter->value.IsObject()) {
         auto value = std::move(iter->value.GetObj());
         begin_document(key);
         json_init_xx(value);
         end_document(key);
-    }
-    else
+    } else
         return;
 }
 
@@ -423,49 +408,35 @@ void xx::json_set_array(JsonArray const& array, std::string key)
     begin_array(key);
 
     auto len = array.Size();
-    for (size_t i = 0; i < len; i ++)
-    {
-        if (array[i].IsArray())
-        {
+    for (size_t i = 0; i < len; i++) {
+        if (array[i].IsArray()) {
             auto value = std::move(array[i].GetArray());
             json_set_array(value, key);
             continue;
         }
 
-         if (array[i].IsInt() && array[i].GetInt() >= 0)
-        {
+        if (array[i].IsInt() && array[i].GetInt() >= 0) {
             uint32_t value = std::move(array[i].GetInt());
             push_uint(key, value);
-        }
-        else if (array[i].IsInt())
-        {
+        } else if (array[i].IsInt()) {
             int32_t value = std::move(array[i].GetInt());
             push_int(key, value);
-        }
-        else if (array[i].IsDouble())
-        {
+        } else if (array[i].IsDouble()) {
             double value = std::move(array[i].GetDouble());
             push_float_64(key, value);
-        }
-        else if (array[i].IsFloat())
-        {
+        } else if (array[i].IsFloat()) {
             float value = std::move(array[i].GetFloat());
             push_float_32(key, value);
-        }
-        else if (array[i].IsString())
-        {
+        } else if (array[i].IsString()) {
             uint32_t len = std::move(array[i].GetStringLength());
             push_string(key, array[i].GetString(), len);
-        }
-        else if (array[i].IsObject())
-        {
+        } else if (array[i].IsObject()) {
             auto value = std::move(array[i].GetObj());
             begin_document(key);
             json_init_xx(value);
             end_document(key);
-        }
-        else
-            return;  
+        } else
+            return;
     }
 
     end_array(key);
@@ -476,7 +447,7 @@ std::string xx::to_json()
     traverse(0);
     rapidjson::Document doc;
     auto allocator = doc.GetAllocator();
-    json_xx_get_data(doc,allocator);
+    json_xx_get_data(doc, allocator);
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
     doc.Accept(writer);
@@ -494,8 +465,7 @@ void xx::json_xx_get_data(JsonItem& item, JsonAlloca& alloca)
         xxxx t = cx[t_index];
         JsonItem child;
         switch (t.value_type) {
-        case xxxx::u1:
-        {
+        case xxxx::u1: {
             child.SetString(rapidjson::StringRef<char>(t.str.str, t.str.len));
 
             char* str = new char[t.key.length()];
@@ -505,68 +475,62 @@ void xx::json_xx_get_data(JsonItem& item, JsonAlloca& alloca)
             item.AddMember(key, child, alloca);
             break;
         }
-        case xxxx::u2:
-        {
+        case xxxx::u2: {
             child.SetInt(t.integer);
-            
+
             char* str = new char[t.key.length()];
             memcpy(str, t.key.c_str(), t.key.length());
             sg.push_back(str);
 
-            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                child, alloca);
             break;
         }
-        case xxxx::u3:
-        {
+        case xxxx::u3: {
             child.SetUint(t.unsigned_integer);
 
             char* str = new char[t.key.length()];
             memcpy(str, t.key.c_str(), t.key.length());
             sg.push_back(str);
 
-            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                child, alloca);
             break;
         }
-        case xxxx::u4:
-        {
+        case xxxx::u4: {
             child.SetDouble(t.float_64);
 
             char* str = new char[t.key.length()];
             memcpy(str, t.key.c_str(), t.key.length());
             sg.push_back(str);
 
-            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                child, alloca);
             break;
         }
-        case xxxx::u5:
-        {
+        case xxxx::u5: {
             child.SetFloat(t.float_32);
 
             char* str = new char[t.key.length()];
             memcpy(str, t.key.c_str(), t.key.length());
             sg.push_back(str);
 
-            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                child, alloca);
             break;
         }
-        case xxxx::u6:
-        {
+        case xxxx::u6: {
             json_pop_array(child, alloca, t_index);
 
             char* str = new char[t.key.length()];
             memcpy(str, t.key.c_str(), t.key.length());
             sg.push_back(str);
 
-            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+            item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                child, alloca);
             break;
         }
-        case xxxx::u7:
-        {
+        case xxxx::u7: {
             if (t.array_document == 4) {
                 cxs.push(t_index);
                 json_xx_get_data(child, alloca);
@@ -575,8 +539,8 @@ void xx::json_xx_get_data(JsonItem& item, JsonAlloca& alloca)
                 memcpy(str, t.key.c_str(), t.key.length());
                 sg.push_back(str);
 
-                item.AddMember(rapidjson::StringRef<char>(str, t.key.length()), 
-                            child, alloca);
+                item.AddMember(rapidjson::StringRef<char>(str, t.key.length()),
+                    child, alloca);
             } else
                 return;
             break;
@@ -592,8 +556,7 @@ bool xx::json_pop_array(JsonItem& item, JsonAllocator& allocator, size_t index)
     item.SetArray();
     auto jarr = item.GetArray();
 
-    for (auto value :cx[index].array)
-    {
+    for (auto value : cx[index].array) {
         rapidjson::Value it;
         if (cx[value].value_type == xxxx::u6) {
             json_pop_array(it, allocator, value);

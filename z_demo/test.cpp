@@ -32,6 +32,7 @@ std::string file_read(std::string path)
     fread(buffer, 1, length, file);
     fflush(file);
     fclose(file);
+    
     std::string sss(buffer,length);
     delete buffer;
     return sss;
@@ -111,6 +112,10 @@ int main(void)
     std::cout << "to_msgpack\t" << timer.end() << "us" << std::endl;
     std::cout << std::endl;
     
+    x->clear();
+    x->start();
+    x->msgpack_init_xx(msgpack);
+    x->end();
     //x->get_value(); //获得值
     timer.start();
     for (int i = 1; i <= 2; i ++)
@@ -125,7 +130,8 @@ int main(void)
             t.str.len = sstr.length();
         }
     }
+    
     std::cout << timer.end() << std::endl;
-    //std::cout << x->to_json() << std::endl;
+    std::cout << x->to_json() << std::endl;
     return 0;
 }

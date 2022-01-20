@@ -32,7 +32,6 @@ using JsonAlloca = rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>;
 
 //这个必须换成vector 空间占用有点过分
 //constexpr unsigned int N = static_cast<unsigned int>(1e7 + 5);
-
 class xx {
 public:    
     //内部类 
@@ -48,13 +47,13 @@ public:
             u6,//数组
             u7 //文档
         };
-        int value_type = u0;//数据类型
-        std::string key;//key
-        
         struct m_string {
             const char* str;//动态内存分配出来的之后需要进行释放掉
             size_t len;
         };
+
+        int value_type = u0;//数据类型
+        std::string key;//key
         std::vector<size_t> array;//u6
         //value数据
         union {
@@ -65,6 +64,7 @@ public:
             float       float_32; //u5
             char        array_document;//3位4位 db,de 1位2位 ab,ae 6 array 7 doucment
         };
+
         xxxx(){}                                                                       //默认构造函数
         xxxx(std::string& key_value, int vt,  void* t) : key(key_value), value_type(vt) //调用这个
         {
@@ -107,28 +107,32 @@ private:
     std::pair<std::vector<size_t>, bool> find(std::size_t current, std::string key);        //查找键的值
     std::pair<std::vector<size_t>, bool> find(std::string document);
 private_value
-    size_t current, idx;                                                  //当前的父节点
+    size_t current, idx;                                             //当前的父节点
     //size_t h[N], e[N], ne[N], idx;
     std::vector<size_t> h, e, ne;
     std::vector<xxxx> cx;                                            //存数据
+    std::vector<char*>  sg;                                          //字符串垃圾桶
+    
     std::stack<size_t> cs;                                           //存储父节点的下标
     std::stack<size_t> cxs;                                          //存储数据
-    std::vector<char*>  sg;                                          //字符串垃圾桶
+
+    std::unordered_multimap<std::string, std::pair<size_t, size_t>> find_tree;                    //查找key对应的值
+    std::unordered_multimap<std::string, size_t> find_document;                          
+    
     //bson
     bson_t* bson;
     bson_iter_t iter;
+
     //msgpack
     msgpack_unpacker unpacker = {};
     msgpack_sbuffer  _sbuf = {};
     msgpack_packer   _packer = {};
 
-    std::unordered_multimap<std::string, std::pair<size_t, size_t>> find_tree;                    //查找key对应的值
-    std::unordered_multimap<std::string, size_t> find_document;
-private_function                                                       //private function
-    size_t traverse(size_t current, bool iss = true);                  //遍历一遍就是存的结果
-    void setcurrent();                                                 //入数组/文档 后设置当前的父亲
-    void resetcurrent();                                               //出数组/文档 后重置当前的父亲
-    void push_point(xxxx&& x);                                         //把树中的每一个点加入进来
+private_function                                                        //private function
+    size_t traverse(size_t current, bool iss = true);                   //遍历一遍就是存的结果
+    void setcurrent();                                                  //入数组/文档 后设置当前的父亲
+    void resetcurrent();                                                //出数组/文档 后重置当前的父亲
+    void push_point(xxxx&& x);                                          //把树中的每一个点加入进来
     void begin_document(std::string& key);                              //文档的开始
     void end_document(std::string& key);                                //文档的结束
     void begin_array(std::string& key);                                 //数组的开始
@@ -308,10 +312,6 @@ inline xx::xxxx& xx::get_value(std::string key, size_t key_tm, bool istrue, std:
 
 inline void xx::clear()
 {
-    //memset(h, -1, sizeof(h));
-    //memset(e, -1 , sizeof(e));
-    //memset(ne, -1, sizeof(ne));
-
     h.clear(); e.clear(); ne.clear();
     h.resize(100); e.resize(100); ne.resize(100);
 

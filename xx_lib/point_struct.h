@@ -66,7 +66,7 @@ public:
         };
 
         xxxx(){}                                                                       //默认构造函数
-        xxxx(std::string& key_value, int vt,  void* t) : key(key_value), value_type(vt) //调用这个
+        xxxx(std::string const& key_value, int vt,  void* t) : key(key_value), value_type(vt) //调用这个
         {
             switch (vt)
             {
@@ -133,16 +133,17 @@ private_function                                                        //privat
     void setcurrent();                                                  //入数组/文档 后设置当前的父亲
     void resetcurrent();                                                //出数组/文档 后重置当前的父亲
     void push_point(xxxx&& x);                                          //把树中的每一个点加入进来
-    void begin_document(std::string& key);                              //文档的开始
-    void end_document(std::string& key);                                //文档的结束
-    void begin_array(std::string& key);                                 //数组的开始
-    void end_array(std::string& key);                                   //数组的结束
 
-    void push_string(std::string& key, const char* str, uint32_t& len); //加入字符串
-    void push_int(std::string& key, int& integer);                      //加入整形
-    void push_uint(std::string& key, uint32_t& unsigned_integer);       //加入无符号整形
-    void push_float_64(std::string& key, double& float_64);             //加入64位的浮点数
-    void push_float_32(std::string& key, float& float_32);              //加入32位的浮点数
+    void begin_document(std::string const& key);                              //文档的开始
+    void end_document(std::string const& key);                                //文档的结束
+    void begin_array(std::string const& key);                                 //数组的开始
+    void end_array(std::string const& key);                                   //数组的结束
+
+    void push_string(std::string const& key, const char* str, uint32_t& len); //加入字符串
+    void push_int(std::string const& key, int& integer);                      //加入整形
+    void push_uint(std::string const& key, uint32_t& unsigned_integer);       //加入无符号整形
+    void push_float_64(std::string const& key, double& float_64);             //加入64位的浮点数
+    void push_float_32(std::string const& key, float& float_32);              //加入32位的浮点数
 
     bool bson_pop_array(bson_t* bson, size_t index);                   //bson 得到xx::xxxx里面的array
     bool bson_pop_document(bson_t* bson, std::string key);             //bson 得到document
@@ -223,7 +224,7 @@ inline void xx::resetcurrent() //恢复父节点  end_doucement, end_array
     cs.pop();
 }
 
-inline void xx::begin_document(std::string& key)
+inline void xx::begin_document(std::string const& key)
 {
     xxxx x;
     x.value_type = xxxx::u7;
@@ -235,7 +236,7 @@ inline void xx::begin_document(std::string& key)
     find_document.insert({key, current});
 }
 
-inline void xx::end_document(std::string& key)
+inline void xx::end_document(std::string const& key)
 {
     xxxx x;
     x.value_type = xxxx::u7;
@@ -245,7 +246,7 @@ inline void xx::end_document(std::string& key)
     resetcurrent();
 }
 
-inline void xx::begin_array(std::string& key)
+inline void xx::begin_array(std::string const& key)
 {
     xxxx x;
     x.value_type = xxxx::u6;
@@ -256,12 +257,12 @@ inline void xx::begin_array(std::string& key)
     h[current] = -1;
 }
 
-inline void xx::end_array(std::string& key)
+inline void xx::end_array(std::string const& key)
 {
     resetcurrent();
 }
 
-inline void xx::push_string(std::string& key, const char* str, uint32_t& len)
+inline void xx::push_string(std::string const& key, const char* str, uint32_t& len)
 {
     xxxx::m_string ms;
     ms.str = new char[len];
@@ -270,22 +271,22 @@ inline void xx::push_string(std::string& key, const char* str, uint32_t& len)
     push_point(xxxx (key, xxxx::u1, &ms));
 }
 
-inline void xx::push_int(std::string& key, int& integer)
+inline void xx::push_int(std::string const& key, int& integer)
 {
     push_point(xxxx(key, xxxx::u2, &integer));
 }
 
-inline void xx::push_uint(std::string& key, uint32_t& unsigned_integer)
+inline void xx::push_uint(std::string const& key, uint32_t& unsigned_integer)
 {
     push_point(xxxx(key, xxxx::u3, &unsigned_integer));
 }
 
-inline void xx::push_float_64(std::string& key, double& float_64)
+inline void xx::push_float_64(std::string const& key, double& float_64)
 {
     push_point(xxxx(key, xxxx::u4, &float_64));
 }
 
-inline void xx::push_float_32(std::string& key, float& float_32)
+inline void xx::push_float_32(std::string const& key, float& float_32)
 {
     push_point(xxxx(key, xxxx::u5, &float_32));
 }

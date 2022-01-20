@@ -68,7 +68,7 @@ int main(void)
 {
     Timer timer;
     std::unique_ptr<xx> x = std::make_unique<xx>();
-    std::string str = file_read("../hahah.json");
+    std::string str = file_read("../test4.json");
     std::cout << sizeof(*x) << std::endl;
 
     timer.start();
@@ -113,6 +113,7 @@ int main(void)
     std::cout << std::endl;
     
     x->clear();
+
     x->start();
     x->msgpack_init_xx(msgpack);
     x->end();
@@ -130,8 +131,7 @@ int main(void)
             t.str.len = sstr.length();
         }
     }
-    
     std::cout << timer.end() << std::endl;
-    std::cout << x->to_json() << std::endl;
+    //std::cout << x->to_json() << std::endl;
     return 0;
 }

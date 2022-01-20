@@ -240,30 +240,30 @@ void xx::msgpack_set_data(msgpack_object_kv const& obj)
     std::string key(obj.key.via.str.ptr, obj.key.via.str.size);
     if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_POSITIVE_INTEGER) {
         uint32_t v = obj.val.via.u64;
-        push_uint(key, v);
+        push_uint(std::string (obj.key.via.str.ptr, obj.key.via.str.size), v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_NEGATIVE_INTEGER) {
         int32_t v = obj.val.via.i64;
-        push_int(key, v);
+        push_int(std::string (obj.key.via.str.ptr, obj.key.via.str.size), v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_FLOAT32) {
         float v = obj.val.via.f64;
-        push_float_32(key, v);
+        push_float_32(std::string (obj.key.via.str.ptr, obj.key.via.str.size), v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_FLOAT64) {
         double v = obj.val.via.f64;
-        push_float_64(key, v);
+        push_float_64(std::string (obj.key.via.str.ptr, obj.key.via.str.size), v);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_STR) {
         uint32_t len = obj.val.via.str.size;
-        push_string(key, obj.val.via.str.ptr, len);
+        push_string(std::string (obj.key.via.str.ptr, obj.key.via.str.size), obj.val.via.str.ptr, len);
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_ARRAY) {
-        begin_array(key);
+        begin_array(std::string (obj.key.via.str.ptr, obj.key.via.str.size));
         for (uint32_t i = 0; i < obj.val.via.array.size; ++i) {
             msgpack_object_kv const& obj_item = { obj.key, obj.val.via.array.ptr[i] };
             msgpack_set_data(obj_item);
         }
-        end_array(key);
+        end_array(std::string (obj.key.via.str.ptr, obj.key.via.str.size));
     } else if (obj.val.type == msgpack_object_type::MSGPACK_OBJECT_MAP) {
-        begin_document(key);
+        begin_document(std::string (obj.key.via.str.ptr, obj.key.via.str.size));
         msgpack_init_xx(obj.val);
-        end_document(key);
+        end_document(std::string (obj.key.via.str.ptr, obj.key.via.str.size));
     } else {
         return;
     }
